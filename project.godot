@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="mod_track_test"
+run/main_scene="res://Mods/walaber_sample/Tracks/sample_track/sample_track.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [layer_names]
