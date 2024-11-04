@@ -39,9 +39,9 @@ script = ExtResource("3_6hs80")
 car_class = "cheat"
 laps = 1
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_4r1pd"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_dg7dc"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_1q8fm"]
+[sub_resource type="BoxMesh" id="BoxMesh_g3qaa"]
 size = Vector3(159.385, 2, 195.725)
 
 [node name="TrackWalaberTest" type="Node3D"]
@@ -77,7 +77,7 @@ size = Vector2(11, 6)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14903, 0)
 visible = false
-mesh = SubResource("ImmediateMesh_4r1pd")
+mesh = SubResource("ImmediateMesh_dg7dc")
 script = ExtResource("6_bxe4m")
 material = ExtResource("7_6slbn")
 bezier_handle_length = 5.0
@@ -419,12 +419,6 @@ transform = Transform3D(-0.000646289, -0.000841651, -0.999999, 0.00040125, 1, -0
 [node name="spectator_car33" parent="SpectatorCars" instance=ExtResource("11_weway")]
 transform = Transform3D(-0.000646289, -0.000841651, -0.999999, 0.00040125, 1, -0.000841916, 1, -0.000401804, -0.000645945, 28.7308, -0.0905333, -58.1353)
 
-[node name="spectator_car36" parent="SpectatorCars" instance=ExtResource("11_weway")]
-transform = Transform3D(-0.000646289, -0.000841651, -0.999999, 0.00040125, 1, -0.000841916, 1, -0.000401804, -0.000645945, 28.7308, -0.0905333, -94.4267)
-
-[node name="spectator_car37" parent="SpectatorCars" instance=ExtResource("11_weway")]
-transform = Transform3D(-0.000646289, -0.000841651, -0.999999, 0.00040125, 1, -0.000841916, 1, -0.000401804, -0.000645945, 28.7308, -0.0905333, -90.4928)
-
 [node name="spectator_car38" parent="SpectatorCars" instance=ExtResource("11_weway")]
 transform = Transform3D(-0.000646289, -0.000841651, -0.999999, 0.00040125, 1, -0.000841916, 1, -0.000401804, -0.000645945, 28.7308, -0.0905333, -86.4267)
 
@@ -544,7 +538,7 @@ unique_name_in_owner = true
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("12_h6jqg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, -39.3061)
-mesh = SubResource("BoxMesh_1q8fm")
+mesh = SubResource("BoxMesh_g3qaa")
 size = Vector3(159.385, 2, 195.725)
 
 [node name="ReverbTrigger" type="Node3D" parent="."]
@@ -594,44 +588,55 @@ starting_track_interp = 0.7
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124702, 3.8147e-06, -0.0853729)
 
-[node name="dfw" parent="." instance=ExtResource("16_uy6ut")]
+[node name="Track" parent="." instance=ExtResource("16_uy6ut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107689, 0.0567589, -0.062006)
 
-[node name="ConstructionSign" parent="." instance=ExtResource("17_j1dxa")]
+[node name="Construction Obstacles" type="Node3D" parent="."]
+
+[node name="ConstructionSign" parent="Construction Obstacles" instance=ExtResource("17_j1dxa")]
 transform = Transform3D(0.120438, 0, 0.700127, 0, 0.718415, 0, -0.734909, 0, 0.114738, -35.5771, 11.8638, -50.0316)
 
-[node name="TrafficCone" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -32.6081, 12.8385, -50.2516)
 
-[node name="TrafficCone3" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone3" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.0302, 9.40593, -79.9376)
 
-[node name="TrafficCone4" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone4" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.1603, 9.40593, -81.3713)
 
-[node name="TrafficCone5" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone5" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.9323, 9.40593, -81.4357)
 
-[node name="TrafficCone6" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone6" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.1404, 9.40593, -82.8211)
 
-[node name="TrafficCone7" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone7" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.1268, 9.40593, -83.0627)
 
-[node name="TrafficCone8" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone8" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.1268, 9.40593, -83.0627)
 
-[node name="TrafficCone9" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone9" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.0314, 9.40593, -84.6252)
 
-[node name="TrafficCone10" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone10" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.0128, 9.40593, -84.593)
 
-[node name="TrafficCone11" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone11" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.2519, 9.40593, -84.6091)
 
-[node name="TrafficCone12" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone12" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.4749, 9.40593, -84.6252)
 
-[node name="TrafficCone2" parent="." instance=ExtResource("18_6t3xa")]
+[node name="TrafficCone2" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.433713, 0, -0.248782, 0, 0.5, 0, 0.248782, 0, 0.433713, -38.191, 12.8074, -51.4182)
+
+[node name="ConstructionSign2" parent="Construction Obstacles" instance=ExtResource("17_j1dxa")]
+transform = Transform3D(0.441016, 0, 0.571684, 0, 0.718415, 0, -0.600085, 0, 0.420143, -15.128, 0.0589508, -39.6543)
+
+[node name="TrafficCone13" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.6994, 1.70764, -38.4418)
+
+[node name="TrafficCone14" parent="Construction Obstacles" instance=ExtResource("18_6t3xa")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -16.3681, 1.70764, -42.764)
