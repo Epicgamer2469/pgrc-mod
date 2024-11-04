@@ -39,9 +39,9 @@ script = ExtResource("3_6hs80")
 car_class = "cheat"
 laps = 1
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_dg7dc"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_n1svj"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_g3qaa"]
+[sub_resource type="BoxMesh" id="BoxMesh_uvg00"]
 size = Vector3(159.385, 2, 195.725)
 
 [node name="TrackWalaberTest" type="Node3D"]
@@ -56,14 +56,14 @@ pgrc_music_name = "seattle"
 
 [node name="CarSpawn" parent="." instance=ExtResource("4_8e7gp")]
 unique_name_in_owner = true
-transform = Transform3D(0.999998, -0.00142943, 0.0013097, 0.00143001, 0.999999, -0.000447053, -0.00130906, 0.000448913, 0.999999, 17.0857, 0.92198, -17.8613)
+transform = Transform3D(0.999998, -0.00142943, 0.0013097, 0.00143001, 0.999999, -0.000447053, -0.00130906, 0.000448913, 0.999999, 16.4899, 0.92198, -17.8613)
 
 [node name="Checkpoints" type="Node3D" parent="."]
 unique_name_in_owner = true
 
 [node name="checkpoint" parent="Checkpoints" instance=ExtResource("5_tsdri")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 9.58056, 0.0708097, -22.9563)
-size = Vector2(15.155, 5)
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 8.54967, 0.0708097, -22.9563)
+size = Vector2(16, 5)
 
 [node name="checkpoint2" parent="Checkpoints" instance=ExtResource("5_tsdri")]
 transform = Transform3D(0.831249, 0.0882994, 0.548843, -0.0207798, 0.99155, -0.128052, -0.555512, 0.0950376, 0.826059, -15.7063, 0.554059, -52.4175)
@@ -77,7 +77,7 @@ size = Vector2(11, 6)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14903, 0)
 visible = false
-mesh = SubResource("ImmediateMesh_dg7dc")
+mesh = SubResource("ImmediateMesh_n1svj")
 script = ExtResource("6_bxe4m")
 material = ExtResource("7_6slbn")
 bezier_handle_length = 5.0
@@ -111,10 +111,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.49
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -23.7777, 10.7133, -60.1872)
 
 [node name="track_path_point17" parent="TrackPath" instance=ExtResource("8_uj3hj")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -35.7703, 12.7949, -50.8865)
+transform = Transform3D(0.978642, 0, -0.205572, 0, 1, 0, 0.205572, 0, 0.978642, -35.9477, 12.7949, -50.3215)
 
 [node name="track_path_point23" parent="TrackPath" instance=ExtResource("8_uj3hj")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -35.7703, 12.7949, -31.3462)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -37.5412, 12.7949, -31.3462)
 
 [node name="track_path_point13" parent="TrackPath" instance=ExtResource("8_uj3hj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6691, 0.609003, -9.70347)
@@ -211,22 +211,6 @@ railing_type = 0
 
 [node name="barrier_railing4" parent="Barriers" instance=ExtResource("10_xshnm")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.0701, 0.221846, -55.9528)
-railing_type = 0
-
-[node name="barrier_railing5" parent="Barriers" instance=ExtResource("10_xshnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1636, 0.221846, -19.1095)
-railing_type = 0
-
-[node name="barrier_railing6" parent="Barriers" instance=ExtResource("10_xshnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1636, 0.221846, -12.4739)
-railing_type = 0
-
-[node name="barrier_railing7" parent="Barriers" instance=ExtResource("10_xshnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1636, 0.221846, -5.96952)
-railing_type = 0
-
-[node name="barrier_railing8" parent="Barriers" instance=ExtResource("10_xshnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1636, 0.221846, 0.894598)
 railing_type = 0
 
 [node name="SpectatorCars" type="Node3D" parent="."]
@@ -538,7 +522,7 @@ unique_name_in_owner = true
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("12_h6jqg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, -39.3061)
-mesh = SubResource("BoxMesh_g3qaa")
+mesh = SubResource("BoxMesh_uvg00")
 size = Vector3(159.385, 2, 195.725)
 
 [node name="ReverbTrigger" type="Node3D" parent="."]
