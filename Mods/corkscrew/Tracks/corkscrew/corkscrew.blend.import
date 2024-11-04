@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dc0et4b8dc5ir"
+uid="uid://de7o161qx1p2g"
 path="res://.godot/imported/corkscrew.blend-7456591bc649bcf3933a60d24c7d1459.scn"
 
 [deps]
@@ -29,7 +29,18 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"corkscrew": {
+"use_external/enabled": false,
+"use_external/path": "res://Mods/corkscrew/Tracks/corkscrew/corkscrew.tres"
+},
+"corkscrew.002": {
+"use_external/enabled": false,
+"use_external/path": "res://Mods/corkscrew/Tracks/corkscrew/corkscrew.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0
