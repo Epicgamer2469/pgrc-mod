@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "road": {
 "use_external/enabled": true,
-"use_external/path": "res://Mods/construction/Tracks/construction/road.tres"
+"use_external/path": "res://Mods/construction/Tracks/construction/construction.tres"
 }
 }
 }
