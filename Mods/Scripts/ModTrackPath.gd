@@ -23,6 +23,32 @@ class_name ModTrackPath
 var _mesh : ImmediateMesh
 var _curve : Curve3D
 
+@export_category("Debug")
+@export var _export: bool:
+	set(value):
+		print("hi")
+		refresh_mesh()
+		var path = get_parent().get_node("%ExportPath") as Path3D
+
+		if value:
+			# Create a new Curve3D for the path
+			var new_curve = Curve3D.new()
+
+			# Copy points from _curve to the new Curve3D (bake it if needed)
+			if _curve != null:
+				var point_count = _curve.get_point_count()
+				for i in range(point_count):
+					# Get the position, in, and out of each point
+					var position = _curve.get_point_position(i)
+					var in_tangent = _curve.get_point_in(i)
+					var out_tangent = _curve.get_point_out(i)
+					
+					# Add the point to the new curve
+					new_curve.add_point(position, in_tangent, out_tangent)
+					
+			# Assign the new Curve3D to the Path3D node
+			path.curve = new_curve
+
 func _ready() -> void:
 	refresh_mesh()
 	
@@ -32,7 +58,6 @@ func _notification(what: int) -> void:
 
 func get_track_curve() -> Curve3D:
 	return _curve
-
 
 func refresh_mesh() -> void:
 	if _mesh == null:
@@ -103,10 +128,3 @@ func refresh_mesh() -> void:
 		
 	_mesh.surface_end()
 		
-		
-		
-	
-	
-	
-	
-	

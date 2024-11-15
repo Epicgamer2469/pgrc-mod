@@ -1,17 +1,48 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx7cnc08ovulm"]
+[gd_scene load_steps=11 format=3 uid="uid://cx7cnc08ovulm"]
 
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackThumbnail.gd" id="1_vnt7r"]
-[ext_resource type="PackedScene" uid="uid://cq6m734ruksda" path="res://Mods/Placeholders/mod_barrier_arrow_block.tscn" id="2_h78g4"]
-[ext_resource type="PackedScene" uid="uid://dq2fgy8jxkssy" path="res://Mods/Placeholders/mod_barrier_railing.tscn" id="3_t54p8"]
-[ext_resource type="PackedScene" uid="uid://3caj508ey3go" path="res://Mods/construction_ahead/Tracks/construction/dfw.blend" id="4_y8ghr"]
+[ext_resource type="Script" path="res://Mods/construction_ahead/Tracks/construction/ThumbnailCar.gd" id="2_ybjlg"]
+[ext_resource type="PackedScene" uid="uid://0amxxkgw67wt" path="res://Mods/construction_ahead/Tracks/construction/dfw_thumbnail.blend" id="3_b7agl"]
 [ext_resource type="PackedScene" uid="uid://djes2t1urfn64" path="res://Mods/construction_ahead/Tracks/construction/scenes/construction_sign.tscn" id="5_xnwml"]
 [ext_resource type="PackedScene" uid="uid://6qalrr032w5a" path="res://Mods/construction_ahead/Tracks/construction/scenes/traffic_cone.tscn" id="6_e0mef"]
+[ext_resource type="Shader" path="res://Shaders/saturn_lit.gdshader" id="7_dkm5t"]
+[ext_resource type="PackedScene" uid="uid://udvcnvjy6jlm" path="res://Mods/Placeholders/Models/spectator_car_proxy.glb" id="9_sr2yu"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_uum8v"]
 flip_faces = true
 top_radius = 12.5
 bottom_radius = 12.5
 height = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fd2xx"]
+render_priority = 0
+shader = ExtResource("7_dkm5t")
+shader_parameter/affine_mapping = true
+shader_parameter/affine_effect_reduction = 1.0
+shader_parameter/albedo_color = Color(0.649654, 0, 0.0918466, 0.729412)
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.1
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/uv_min = Vector2(-999, -999)
+shader_parameter/uv_max = Vector2(999, 999)
+shader_parameter/vert_color_gamma = 1.0
+shader_parameter/vert_color_mult = 1.0
+shader_parameter/vert_color_gain = 0.0
+shader_parameter/vert_color_factor = 1.0
+shader_parameter/vert_color_range = 64
+shader_parameter/cull_bias = 0.0
+shader_parameter/cull_near_far = 0.0
+shader_parameter/cull_pop_factor = 0.0
+shader_parameter/dir_light_contrib_range = Vector2(0.3, 1)
+shader_parameter/grid_culling = false
+shader_parameter/grid_size = 8.0
+
+[sub_resource type="Curve3D" id="Curve3D_ac0r1"]
+_data = {
+"points": PackedVector3Array(-5.24537e-07, 0, 6, 5.24537e-07, 0, -6, 16.1408, 0.21858, -22.3333, -5.24537e-07, 0, 6, 5.24537e-07, 0, -6, 16.9223, 0.21858, -34.8365, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, 7.08084, 0.21858, -47.2371, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, -2.49199, 0.21858, -48.0131, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, -23.9581, 2.1739, -60.2913, 6.39486e-14, 0, -6, -6.39486e-14, 0, 6, -36.1982, 4.8861, -48.0512, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -24.1982, 6.11317, -36.0512, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -11.4971, 8.53366, -48.2401, 6, 0, -7.86804e-07, -6, 0, 7.86804e-07, -23.7777, 10.7133, -60.1872, 1.23343, 0, -5.87185, -1.23343, 0, 5.87185, -35.9477, 12.7949, -50.3215, -1.04908e-06, 0, -6, 1.04908e-06, 0, 6, -37.5412, 12.7949, -31.3462, 0, 0, -6, 0, 0, 6, -37.6691, 0.609003, -9.70347, 0, 0, -6, 0, 0, 6, -37.6691, 0.609003, 3.98376, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -28.8924, 0.609003, 12.6407, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -18.3352, 0.609003, 12.7477, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -10.3578, 0.609003, 4.86522, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -10.3327, 0.609003, 0.0954008, -6, 0, 1.31134e-06, 6, 0, -1.31134e-06, -0.125491, 0.609011, -9.39752, -6, 0, 1.31134e-06, 6, 0, -1.31134e-06, 7.75924, 0.302672, -9.41753, 1.57361e-06, 0, 6, -1.57361e-06, 0, -6, 15.6357, 0.0225141, -22.1665),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 20
 
 [node name="sample_track_thumbnail" type="Node3D"]
 script = ExtResource("1_vnt7r")
@@ -22,80 +53,155 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 mesh = SubResource("CylinderMesh_uum8v")
 
 [node name="Track" type="Node3D" parent="."]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.431529, 5.15861)
+transform = Transform3D(-0.15, 0, -2.26494e-08, 0, 0.15, 0, 2.26494e-08, 0, -0.15, -0.228407, 0.431529, -5.27831)
+script = ExtResource("2_ybjlg")
 
-[node name="Barriers" type="Node3D" parent="Track"]
-unique_name_in_owner = true
+[node name="Track" parent="Track" instance=ExtResource("3_b7agl")]
+transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 
-[node name="barrier_arrow_block" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866025, 0, -0.5, -6.73737, 8.10547, -41.7059)
+[node name="ceiling" parent="Track/Track" index="313"]
+visible = false
 
-[node name="barrier_arrow_block9" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.5, 0, 0.866026, 0, 1, 0, -0.866025, 0, -0.5, -44.029, 0.0567579, 13.6049)
+[node name="ceiling_001" parent="Track/Track" index="314"]
+visible = false
 
-[node name="barrier_arrow_block12" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(1.19209e-07, 0, 1, 0, 1, 0, -1, 0, 1.19209e-07, -44.9696, 0.0567579, 9.89837)
+[node name="ceiling_002" parent="Track/Track" index="315"]
+visible = false
 
-[node name="barrier_arrow_block10" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -41.7575, 0.0567579, 16.6273)
+[node name="ceiling_003" parent="Track/Track" index="316"]
+visible = false
 
-[node name="barrier_arrow_block11" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -38.8322, 0.056757, 18.4751)
+[node name="ceiling_004" parent="Track/Track" index="317"]
+visible = false
 
-[node name="barrier_arrow_block14" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-1, 0, 4.47035e-08, 0, 1, 0, -4.47035e-08, 0, -1, -7.1573, 0.056756, -15.7882)
+[node name="ceiling_005" parent="Track/Track" index="318"]
+visible = false
 
-[node name="barrier_arrow_block15" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866026, -10.9919, 0.056756, -14.9491)
+[node name="ceiling_006" parent="Track/Track" index="319"]
+visible = false
 
-[node name="barrier_arrow_block16" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -13.6975, 0.0567551, -12.3563)
+[node name="ceiling_007" parent="Track/Track" index="320"]
+visible = false
 
-[node name="barrier_arrow_block17" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-2.08616e-07, 0, -1, 0, 1, 0, 1, 0, -2.08616e-07, -14.9651, 0.0567551, -8.68868)
+[node name="ceiling_008" parent="Track/Track" index="321"]
+visible = false
 
-[node name="barrier_arrow_block13" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-1, 0, 1.49012e-07, 0, 1, 0, -1.04308e-07, 0, -1, -35.1216, 0.0567551, 19.0794)
+[node name="ceiling_009" parent="Track/Track" index="322"]
+visible = false
 
-[node name="barrier_arrow_block4" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -5.55969, 8.10547, -44.6561)
+[node name="ceiling_010" parent="Track/Track" index="323"]
+visible = false
 
-[node name="barrier_arrow_block5" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -5.14092, 8.10547, -47.8483)
+[node name="ceiling_011" parent="Track/Track" index="324"]
+visible = false
 
-[node name="barrier_arrow_block6" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, -5.53672, 8.10547, -50.9615)
+[node name="ceiling_012" parent="Track/Track" index="325"]
+visible = false
 
-[node name="barrier_arrow_block7" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866025, 0, 0.5, -6.78319, 8.10547, -53.9547)
+[node name="ceiling_013" parent="Track/Track" index="326"]
+visible = false
 
-[node name="barrier_arrow_block2" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(0.707107, -3.70895e-09, -0.707107, -0.0298448, 0.999109, -0.0298448, 0.706477, 0.042207, 0.706477, -12.7646, -0.404694, -42.9057)
+[node name="ceiling_014" parent="Track/Track" index="327"]
+visible = false
 
-[node name="barrier_arrow_block8" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(0.705557, -0.120272, -0.698372, 0.0554933, 0.991843, -0.114749, 0.706477, 0.042207, 0.706477, -10.3754, -0.228292, -40.7149)
+[node name="ceiling_015" parent="Track/Track" index="328"]
+visible = false
 
-[node name="barrier_arrow_block3" parent="Track/Barriers" instance=ExtResource("2_h78g4")]
-transform = Transform3D(0.258819, 0, -0.965926, -0.126664, 0.991365, -0.0339394, 0.957585, 0.131132, 0.256584, -14.5074, -0.253327, -45.5698)
+[node name="ceiling_016" parent="Track/Track" index="329"]
+visible = false
 
-[node name="barrier_railing" parent="Track/Barriers" instance=ExtResource("3_t54p8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.42006, 0.221846, -55.9528)
-railing_type = 0
+[node name="ceiling_017" parent="Track/Track" index="330"]
+visible = false
 
-[node name="barrier_railing2" parent="Track/Barriers" instance=ExtResource("3_t54p8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.954, 0.221846, -55.9528)
-railing_type = 0
+[node name="ceiling_018" parent="Track/Track" index="331"]
+visible = false
 
-[node name="barrier_railing3" parent="Track/Barriers" instance=ExtResource("3_t54p8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5362, 0.221846, -55.9528)
-railing_type = 0
+[node name="ceiling_019" parent="Track/Track" index="332"]
+visible = false
 
-[node name="barrier_railing4" parent="Track/Barriers" instance=ExtResource("3_t54p8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.0701, 0.221846, -55.9528)
-railing_type = 0
+[node name="ceiling_020" parent="Track/Track" index="333"]
+visible = false
 
-[node name="Track" parent="Track" instance=ExtResource("4_y8ghr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107689, 0.0567589, -0.062006)
+[node name="ceiling_021" parent="Track/Track" index="334"]
+visible = false
+
+[node name="ceiling_022" parent="Track/Track" index="335"]
+visible = false
+
+[node name="ceiling_023" parent="Track/Track" index="336"]
+visible = false
+
+[node name="ceiling_024" parent="Track/Track" index="337"]
+visible = false
+
+[node name="ceiling_025" parent="Track/Track" index="338"]
+visible = false
+
+[node name="ceiling_026" parent="Track/Track" index="339"]
+visible = false
+
+[node name="ceiling_027" parent="Track/Track" index="340"]
+visible = false
+
+[node name="ceiling_028" parent="Track/Track" index="341"]
+visible = false
+
+[node name="ceiling_029" parent="Track/Track" index="342"]
+visible = false
+
+[node name="ceiling_030" parent="Track/Track" index="343"]
+visible = false
+
+[node name="ceiling_031" parent="Track/Track" index="344"]
+visible = false
+
+[node name="ceiling_032" parent="Track/Track" index="345"]
+visible = false
+
+[node name="ceiling_033" parent="Track/Track" index="346"]
+visible = false
+
+[node name="ceiling_034" parent="Track/Track" index="347"]
+visible = false
+
+[node name="ceiling_035" parent="Track/Track" index="348"]
+visible = false
+
+[node name="ceiling_036" parent="Track/Track" index="349"]
+visible = false
+
+[node name="ceiling_037" parent="Track/Track" index="350"]
+visible = false
+
+[node name="ceiling_038" parent="Track/Track" index="351"]
+visible = false
+
+[node name="ceiling_039" parent="Track/Track" index="352"]
+visible = false
+
+[node name="ceiling_040" parent="Track/Track" index="353"]
+visible = false
+
+[node name="ceiling_041" parent="Track/Track" index="354"]
+visible = false
+
+[node name="ceiling_042" parent="Track/Track" index="355"]
+visible = false
+
+[node name="ceiling_043" parent="Track/Track" index="356"]
+visible = false
+
+[node name="ceiling_044" parent="Track/Track" index="357"]
+visible = false
+
+[node name="ceiling_045" parent="Track/Track" index="358"]
+visible = false
+
+[node name="ceiling_046" parent="Track/Track" index="359"]
+visible = false
+
+[node name="ceiling_047" parent="Track/Track" index="360"]
+visible = false
 
 [node name="Construction Obstacles" type="Node3D" parent="Track"]
 
@@ -117,34 +223,19 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.6994, 1.70764, -38.
 [node name="TrafficCone14" parent="Track/Construction Obstacles" instance=ExtResource("6_e0mef")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -16.3681, 1.70764, -42.764)
 
-[node name="Bowling" type="Node3D" parent="Track/Construction Obstacles"]
+[node name="car_proxy" parent="Track" instance=ExtResource("9_sr2yu")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, 1, -8, 0.14903, 3)
 
-[node name="TrafficCone3" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.0302, 9.40593, -79.9376)
+[node name="Spectator4" parent="Track/car_proxy" index="0"]
+transform = Transform3D(1, 0, -9.9476e-14, 0, 1, 0, 9.9476e-14, 0, 1, 0, 0.7, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_fd2xx")
 
-[node name="TrafficCone4" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.1603, 9.40593, -81.3713)
+[node name="ExportPath" type="Path3D" parent="Track"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14903, 0)
+visible = false
+curve = SubResource("Curve3D_ac0r1")
 
-[node name="TrafficCone5" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.9323, 9.40593, -81.4357)
-
-[node name="TrafficCone6" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.1404, 9.40593, -82.8211)
-
-[node name="TrafficCone7" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.1268, 9.40593, -83.0627)
-
-[node name="TrafficCone8" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.1268, 9.40593, -83.0627)
-
-[node name="TrafficCone9" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.0314, 9.40593, -84.6252)
-
-[node name="TrafficCone10" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.0128, 9.40593, -84.593)
-
-[node name="TrafficCone11" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.2519, 9.40593, -84.6091)
-
-[node name="TrafficCone12" parent="Track/Construction Obstacles/Bowling" instance=ExtResource("6_e0mef")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.4749, 9.40593, -84.6252)
+[editable path="Track/Track"]
+[editable path="Track/car_proxy"]

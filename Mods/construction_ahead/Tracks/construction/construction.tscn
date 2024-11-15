@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://br64irfb255l2"]
+[gd_scene load_steps=30 format=3 uid="uid://br64irfb255l2"]
 
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrack.gd" id="1_rcn8v"]
 [ext_resource type="Script" path="res://Mods/Scripts/ModRaceSettings.gd" id="2_1cu7p"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://3caj508ey3go" path="res://Mods/construction_ahead/Tracks/construction/dfw.blend" id="16_uy6ut"]
 [ext_resource type="PackedScene" uid="uid://djes2t1urfn64" path="res://Mods/construction_ahead/Tracks/construction/scenes/construction_sign.tscn" id="17_j1dxa"]
 [ext_resource type="PackedScene" uid="uid://6qalrr032w5a" path="res://Mods/construction_ahead/Tracks/construction/scenes/traffic_cone.tscn" id="18_6t3xa"]
-[ext_resource type="PackedScene" uid="uid://nu27gmyay3un" path="res://Mods/Placeholders/mod_intro_camera.tscn" id="19_c47og"]
+[ext_resource type="PackedScene" uid="uid://nu27gmyay3un" path="res://Mods/Placeholders/mod_intro_camera.tscn" id="19_76jep"]
 
 [sub_resource type="Resource" id="Resource_5y32m"]
 script = ExtResource("3_6hs80")
@@ -40,13 +40,34 @@ script = ExtResource("3_6hs80")
 car_class = "cheat"
 laps = 1
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_1wxew"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_k7sfx"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_q64yo"]
+[sub_resource type="Curve3D" id="Curve3D_rrqgu"]
+_data = {
+"points": PackedVector3Array(-5.24537e-07, 0, 6, 5.24537e-07, 0, -6, 16.1408, 0.21858, -22.3333, -5.24537e-07, 0, 6, 5.24537e-07, 0, -6, 16.9223, 0.21858, -34.8365, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, 7.08084, 0.21858, -47.2371, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, -2.49199, 0.21858, -48.0131, 6, 0, 2.62268e-07, -6, 0, -2.62268e-07, -23.9581, 2.1739, -60.2913, 6.39486e-14, 0, -6, -6.39486e-14, 0, 6, -36.1982, 4.8861, -48.0512, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -24.1982, 6.11317, -36.0512, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -11.4971, 8.53366, -48.2401, 6, 0, -7.86804e-07, -6, 0, 7.86804e-07, -23.7777, 10.7133, -60.1872, 1.23343, 0, -5.87185, -1.23343, 0, 5.87185, -35.9477, 12.7949, -50.3215, -1.04908e-06, 0, -6, 1.04908e-06, 0, 6, -37.5412, 12.7949, -31.3462, 0, 0, -6, 0, 0, 6, -37.6691, 0.609003, -9.70347, 0, 0, -6, 0, 0, 6, -37.6691, 0.609003, 3.98376, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -28.8924, 0.609003, 12.6407, -6, 0, 2.62268e-07, 6, 0, -2.62268e-07, -18.3352, 0.609003, 12.7477, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -10.3578, 0.609003, 4.86522, 5.24537e-07, 0, 6, -5.24537e-07, 0, -6, -10.3327, 0.609003, 0.0954008, -6, 0, 1.31134e-06, 6, 0, -1.31134e-06, -0.125491, 0.609011, -9.39752, -6, 0, 1.31134e-06, 6, 0, -1.31134e-06, 7.75924, 0.302672, -9.41753, 1.57361e-06, 0, 6, -1.57361e-06, 0, -6, 15.6357, 0.0225141, -22.1665),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 20
+
+[sub_resource type="BoxMesh" id="BoxMesh_ybcwm"]
 size = Vector3(159.385, 2, 195.725)
 
-[sub_resource type="BoxMesh" id="BoxMesh_83ift"]
+[sub_resource type="BoxMesh" id="BoxMesh_1vtyn"]
 size = Vector3(32, 9, 96)
+
+[sub_resource type="Curve3D" id="Curve3D_4ntrx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.0704, 9, 10.0695, -8.76477, 2.57396, 8.47261, 8.76477, -2.57396, -8.47261, -12.71, 5.96917, -2.09839, 0, 0, 0, 0, 0, 0, 11.0315, 3.8242, -9.71301),
+"tilts": PackedFloat32Array(0, 0.00109135, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_3gqep"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.378843, 3.0459, -7.85645, 0, 0, 0, 0, 0, 0, 15.2939, 1.18389, -17.9774),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
 
 [node name="TrackWalaberTest" type="Node3D"]
 script = ExtResource("1_rcn8v")
@@ -80,10 +101,11 @@ size = Vector2(11.25, 6)
 [node name="TrackPath" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14903, 0)
-mesh = SubResource("ImmediateMesh_1wxew")
+visible = false
+mesh = SubResource("ImmediateMesh_k7sfx")
 script = ExtResource("6_bxe4m")
 material = ExtResource("7_6slbn")
-bezier_handle_length = 5.0
+bezier_handle_length = 6.0
 track_width = 8.0
 
 [node name="track_path_point" parent="TrackPath" instance=ExtResource("8_uj3hj")]
@@ -145,6 +167,12 @@ transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7.7592
 
 [node name="track_path_point16" parent="TrackPath" instance=ExtResource("8_uj3hj")]
 transform = Transform3D(-1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 15.6357, 0.0225141, -22.1665)
+
+[node name="ExportPath" type="Path3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14903, 0)
+visible = false
+curve = SubResource("Curve3D_rrqgu")
 
 [node name="Barriers" type="Node3D" parent="."]
 unique_name_in_owner = true
@@ -525,17 +553,17 @@ unique_name_in_owner = true
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("12_h6jqg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, -39.3061)
-mesh = SubResource("BoxMesh_q64yo")
+mesh = SubResource("BoxMesh_ybcwm")
 size = Vector3(159.385, 2, 195.725)
 
 [node name="ReverbTrigger" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, -8)
 script = ExtResource("13_xw8fd")
-reverb_strength = 0.8
+reverb_strength = 0.45
 
 [node name="trigger" parent="ReverbTrigger" instance=ExtResource("12_h6jqg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0958, 1.65261, -40.2914)
-mesh = SubResource("BoxMesh_83ift")
+mesh = SubResource("BoxMesh_1vtyn")
 size = Vector3(32, 9, 96)
 
 [node name="TrackCameras" type="Node3D" parent="."]
@@ -579,19 +607,10 @@ starting_track_interp = 0.7
 [node name="TrackCameraPreviewer" parent="." instance=ExtResource("15_hv070")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124702, 3.8147e-06, -0.0853729)
+preview_car_interp = 0.15
 
 [node name="Track" parent="." instance=ExtResource("16_uy6ut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107689, 0.0567589, -0.062006)
-
-[node name="IntroCamera" parent="." instance=ExtResource("19_c47og")]
-unique_name_in_owner = true
-preview_interp = 1.0
-
-[node name="cam" parent="IntroCamera" index="2"]
-transform = Transform3D(0.663077, 0.10419, -0.741264, 0, 0.990266, 0.139188, 0.748551, -0.0922927, 0.656623, 2.8126, 3.63966, -9.93511)
-
-[node name="look" parent="IntroCamera" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3054, 1.85718, -18.344)
 
 [node name="Construction Obstacles" type="Node3D" parent="."]
 
@@ -644,5 +663,20 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.2519, 9.40593, -84.6
 
 [node name="TrafficCone12" parent="Construction Obstacles/Bowling" instance=ExtResource("18_6t3xa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.4749, 9.40593, -84.6252)
+
+[node name="IntroCamera" parent="." instance=ExtResource("19_76jep")]
+unique_name_in_owner = true
+
+[node name="CameraPath" parent="IntroCamera" index="0"]
+curve = SubResource("Curve3D_4ntrx")
+
+[node name="LookPath" parent="IntroCamera" index="1"]
+curve = SubResource("Curve3D_3gqep")
+
+[node name="cam" parent="IntroCamera" index="2"]
+transform = Transform3D(0.623987, 0.158587, -0.765174, 0, 0.97919, 0.202944, 0.781435, -0.126634, 0.611002, -22.0704, 9, 10.0695)
+
+[node name="look" parent="IntroCamera" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378843, 3.0459, -7.85645)
 
 [editable path="IntroCamera"]
