@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackThumbnail.gd" id="1_vnt7r"]
 [ext_resource type="Script" path="res://Mods/construction_ahead/Tracks/construction/ThumbnailCar.gd" id="2_ybjlg"]
 [ext_resource type="PackedScene" uid="uid://0amxxkgw67wt" path="res://Mods/construction_ahead/Tracks/construction/dfw_thumbnail.blend" id="3_b7agl"]
-[ext_resource type="PackedScene" uid="uid://djes2t1urfn64" path="res://Mods/construction_ahead/Tracks/construction/scenes/construction_sign.tscn" id="5_xnwml"]
-[ext_resource type="PackedScene" uid="uid://6qalrr032w5a" path="res://Mods/construction_ahead/Tracks/construction/scenes/traffic_cone.tscn" id="6_e0mef"]
+[ext_resource type="PackedScene" uid="uid://djes2t1urfn64" path="res://Mods/construction/Tracks/construction/scenes/construction_sign.tscn" id="5_xnwml"]
+[ext_resource type="PackedScene" uid="uid://6qalrr032w5a" path="res://Mods/construction/Tracks/construction/scenes/traffic_cone.tscn" id="6_e0mef"]
 [ext_resource type="Shader" path="res://Shaders/saturn_lit.gdshader" id="7_dkm5t"]
 [ext_resource type="PackedScene" uid="uid://udvcnvjy6jlm" path="res://Mods/Placeholders/Models/spectator_car_proxy.glb" id="9_sr2yu"]
 
@@ -20,9 +20,6 @@ shader = ExtResource("7_dkm5t")
 shader_parameter/affine_mapping = true
 shader_parameter/affine_effect_reduction = 1.0
 shader_parameter/albedo_color = Color(0.649654, 0, 0.0918466, 0.729412)
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.1
-shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/uv_min = Vector2(-999, -999)
 shader_parameter/uv_max = Vector2(999, 999)
 shader_parameter/vert_color_gamma = 1.0
@@ -30,12 +27,18 @@ shader_parameter/vert_color_mult = 1.0
 shader_parameter/vert_color_gain = 0.0
 shader_parameter/vert_color_factor = 1.0
 shader_parameter/vert_color_range = 64
+shader_parameter/culling_on = true
 shader_parameter/cull_bias = 0.0
 shader_parameter/cull_near_far = 0.0
 shader_parameter/cull_pop_factor = 0.0
 shader_parameter/dir_light_contrib_range = Vector2(0.3, 1)
 shader_parameter/grid_culling = false
 shader_parameter/grid_size = 8.0
+shader_parameter/fog_on = false
+shader_parameter/fog_color = Color(1, 1, 1, 1)
+shader_parameter/fog_dist_range = Vector2(100, 200)
+shader_parameter/fog_intensity_range = Vector2(0, 0.4)
+shader_parameter/fog_value_range = 64
 
 [sub_resource type="Curve3D" id="Curve3D_ac0r1"]
 _data = {
@@ -225,7 +228,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -16.3681, 1.70764, -42.
 
 [node name="car_proxy" parent="Track" instance=ExtResource("9_sr2yu")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, 1, -8, 0.14903, 3)
+transform = Transform3D(-0.695171, 0.215978, 0.685632, 0.102146, 0.973798, -0.203184, -0.71155, -0.0712127, -0.699017, -32.4308, 3.56028, -56.3176)
 
 [node name="Spectator4" parent="Track/car_proxy" index="0"]
 transform = Transform3D(1, 0, -9.9476e-14, 0, 1, 0, 9.9476e-14, 0, 1, 0, 0.7, 0)
