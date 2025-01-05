@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://djes2t1urfn64"]
+
+[ext_resource type="PackedScene" uid="uid://b4gb4waiafuid" path="res://Mods/construction/Tracks/construction/scenes/construction_sign.blend" id="1_84nt6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r78eo"]
+size = Vector3(1.99023, 4.01428, 5.22327)
+
+[node name="ConstructionSign" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+mass = 0.01
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95685, 0.0838013)
+shape = SubResource("BoxShape3D_r78eo")
+
+[node name="construction_sign" parent="RigidBody3D" instance=ExtResource("1_84nt6")]
